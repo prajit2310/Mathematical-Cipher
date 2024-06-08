@@ -1,0 +1,42 @@
+                                              Assignment 1
+
+1) SHIFT CIPHER:
+      a) It is not perfectly secret because given the cipher text, we can use all numbers from 1 to 25 and get all possible decoded messages and select the correct meaningful message from the decoded list.
+      b) Shifting all the characters by same key is the problem. If we increase the key size and repeat the sequence till the end we can make it perfectly secret.
+              Ex: If message is “ciphers” and key = “234” , repeat the key to length of word i.e, “2342342” and shift c by 2 ; i by 3; p by 4; h by 2; and so on till the end to get encrypted message as “eltjhvu” and it is perfectly secret because attacker cant find our key length and the numbers we chose in our key.
+
+2) LETS CODE:
+a) code:
+      def Enc(m,k):
+         for ch in m:
+            tch=ch
+            if(ch!=" "):
+                tch= chr( (ord(ch)-ord('a')+k)%26 + ord('a') )
+            print(tch,end="")
+m = input()
+k = int(input())
+Enc(m,k)
+
+ Encrypted messages :
+         i) m = iitk is better than iitd and iitb ;  k = 9
+           c = rrct rb knccna cqjw rrcm jwm rrck
+
+          ii) m = lets learn cryptography ; k = 25
+             c = kdsr kdzqm bqxosnfqzogx
+
+   b) code :
+           
+def Dec(m):
+  for i in range (1,26):
+      for ch in m:
+          tch=ch
+          if (ch != " "):
+              tch = chr( (ord(ch)-ord('a')+i)%26 + ord('a') )
+          print(tch,end="")
+          print("\n")
+m=input()
+Dec(m)
+
+Decrypted messages:
+a) it was damn easy again
+b) it was damn easy
