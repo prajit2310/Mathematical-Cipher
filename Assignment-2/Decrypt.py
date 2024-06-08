@@ -39,6 +39,15 @@ for i in range(0,7):
 
     key_char = sort_acc_to_e(pos_e)
     #print(key_char)
+
+#posibilities
+#[186, 177]
+#[90, 31, 27]
+#[144, 149, 212, 154, 145]
+#[191, 178, 182, 180, 184, 185]
+#[83, 22, 89, 95, 87]
+#[136, 198, 199, 205, 193]
+#[62, 53, 52, 60]
     
 keys = [186,31,145,178,83,205,62]
 
@@ -49,3 +58,7 @@ for i in range(len(hex_to_dec)):
     decryted_msg.append(k)
     s += chr(k)
 print(s)
+
+
+The decrypted message is:
+Cryptography is the practice and study of techniques for, among other things, secure communication in the presence of attackers. Cryptography has been used for hundreds, if not thousands, of years, but traditional cryptosystems were designed and evaluated in a fairly ad hoc manner. For example, the Vigenere encryption scheme was thought to be secure for decades after it was invented, but we now know, and this exercise demonstrates, that it can be broken very easily.
